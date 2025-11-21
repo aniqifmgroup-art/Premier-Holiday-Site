@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Premier Holidays — Private Tours & Transfers (KL)</title>
+  <meta name="description" content="Premier Holidays — Private & group tours from Kuala Lumpur: city tours, Cameron Highlands, Fireflies, Genting, Penang, Malacca, transfers and more. Contact by Call or WhatsApp only." />
+  <meta name="theme-color" content="#0d47a1" />
+
+  <style>
+    :root{
+      --royal:#0d47a1;
+      --white:#ffffff;
+      --muted:#6b7280;
+      --accent:#bfa66a; /* subtle luxury accent */
+      --card:#fff;
+      --bg:#fbfcfe;
+      --maxw:1180px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--royal);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+    header{background:var(--white);border-bottom:1px solid #eef1f6;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--royal),#1565c0);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px;box-shadow:0 6px 18px rgba(13,71,161,0.12)}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .nav-links a{color:var(--royal);text-decoration:none;font-weight:700;font-size:14px;padding:8px 10px;border-radius:8px}
+    .cta{background:var(--royal);color:var(--white);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800;box-shadow:0 8px 22px rgba(13,71,161,0.12)}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;padding:46px 0}
+    .hero h1{font-size:34px;margin:0 0 12px;color:var(--royal)}
+    .hero p{color:var(--muted);margin:0 0 18px;line-height:1.6}
+    .pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .pill{background:rgba(13,71,161,0.08);border-radius:999px;padding:8px 12px;font-weight:700;color:var(--royal);font-size:13px}
+    .hero-card{background:linear-gradient(180deg,#fff,#fcfdff);padding:20px;border-radius:12px;box-shadow:0 10px 30px rgba(13,71,161,0.06)}
+    .price{font-size:20px;font-weight:900;margin:4px 0;color:var(--royal)}
+    /* Two-column main: content + reviews */
+    .main-grid{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start;margin-top:18px}
+    .section{padding:26px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(13,71,161,0.04)}
+    .card h3{margin:0 0 8px;font-size:16px;color:var(--royal)}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+    .tours{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .tour{display:flex;gap:12px;padding:12px;background:linear-gradient(180deg,#fff,#fcfdff);border-radius:10px;align-items:flex-start}
+    .tour .img{width:92px;height:68px;border-radius:8px;background:#eee;flex-shrink:0;display:block;object-fit:cover}
+    .tour h4{margin:0 0 6px;font-size:15px;color:var(--royal)}
+    .tour p{margin:0;color:var(--muted);font-size:13px}
+    /* Reviews column */
+    .reviews-col{background:linear-gradient(180deg,#fff,#fbfdff);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(13,71,161,0.06);height:720px;overflow:auto}
+    .reviews-col h3{margin:0 0 10px;color:var(--royal)}
+    .review{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#feffff);margin-bottom:10px;border:1px solid #eef4ff}
+    .stars{color:#f6b042;font-size:14px;margin-bottom:6px}
+    .rev-meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .rev-text{font-size:14px;color:#10243b;line-height:1.45}
+    /* Contact / booking */
+    .contact{display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
+    form{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 8px 20px rgba(13,71,161,0.04)}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:10px;font-size:14px}
+    button{background:var(--royal);color:var(--white);padding:11px 14px;border-radius:10px;border:0;font-weight:800}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    footer{padding:26px 0;color:var(--muted);font-size:14px;text-align:center}
+    /* Accent blocks */
+    .accent-strip{background:linear-gradient(90deg,var(--royal),#1565c0);color:var(--white);padding:18px;border-radius:12px;margin:18px 0}
+    .accent-strip h3{margin:0;font-size:18px}
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      .main-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .tours{grid-template-columns:1fr}
+      .reviews-col{height:520px}
+    }
+    @media (max-width:560px){
+      .nav-links{display:none}
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:22px}
+      .reviews-col{height:360px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">PH</div>
+        <div>
+          <div style="font-weight:900;color:var(--royal);font-size:18px">Premier Holidays</div>
+          <div style="font-size:12px;color:var(--muted)">Private tours • Transfers • Custom itineraries</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#tours">Tours</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">WhatsApp Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <h1>Premier Holidays — bespoke private tours from Kuala Lumpur</h1>
+        <p>White-glove private & group tours across Peninsular Malaysia: city highlights, Cameron Highlands, Genting, Penang & Ipoh, Malacca, fireflies, national parks, transfers and vehicle hire. Curated, comfortable and guided by experienced professionals.</p>
+
+        <div class="pill-list" aria-hidden="true">
+          <span class="pill">Private & Group</span>
+          <span class="pill">Airport Transfers</span>
+          <span class="pill">Custom Itineraries</span>
+          <span class="pill">English & Malay Guides</span>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:18px">
+          <a class="cta" href="https://wa.me/60123410000" target="_blank" rel="noopener">WhatsApp +60 12-341 0000</a>
+          <a href="#tours" style="text-decoration:none;padding:10px 14px;border-radius:10px;background:var(--white);border:1px solid #e6e9ef;font-weight:800;color:var(--royal)">View Tours</a>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:13px">
+          <strong>Note:</strong> Contact only via <strong>Call or WhatsApp</strong>. <em>WhatsApp for package price & bookings.</em>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-hidden="true">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-size:12px;color:var(--muted)">Sample from</div>
+            <div class="price">RM 300 / day</div>
+            <div style="color:var(--muted);font-size:13px">Private car + driver-guide (sample starting rate)</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-weight:800;color:var(--royal)">Premier service</div>
+            <div style="color:var(--muted);font-size:13px">Pickup: KL City / KLIA</div>
+          </div>
+        </div>
+
+        <hr style="margin:12px 0;border:0;border-top:1px solid #f1f3f6"/>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div style="font-size:13px;color:var(--muted)">Languages: EN / MS</div>
+          <div style="font-size:13px;color:var(--muted)">Customisable itineraries</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Accent strip -->
+    <div class="accent-strip">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:14px">
+        <div>
+          <h3 style="margin:0">Travel worry-free — Riz & Nur will look after you</h3>
+          <div style="color:rgba(255,255,255,0.9);font-size:13px;margin-top:6px">Riz — expert guide with deep local knowledge. Nur — guest relations, always available on WhatsApp to assist.</div>
+        </div>
+        <div>
+          <a class="cta" href="https://wa.me/60123410000" target="_blank" rel="noopener">Ask for package price (WhatsApp)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main grid: left content + reviews column -->
+    <div class="main-grid">
+      <div>
+        <!-- Services -->
+        <section class="section" id="services">
+          <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:12px">
+            <div>
+              <h2 style="margin:0;color:var(--royal)">We offer</h2>
+              <div style="color:var(--muted);font-size:14px">Tours, transfers & vehicle hire across Peninsular Malaysia</div>
+            </div>
+          </div>
+
+          <div class="grid" aria-hidden="false">
+            <div class="card">
+              <h3>City tours</h3>
+              <p>Half-day or full-day KL highlights: Petronas Twin Towers, Batu Caves, Merdeka Square, Chinatown, street-food stops.</p>
+            </div>
+            <div class="card">
+              <h3>Cameron Highlands</h3>
+              <p>Day trips & overnight options — tea plantations, strawberry farms, mossy forest walks and local markets.</p>
+            </div>
+            <div class="card">
+              <h3>Fireflies Tour</h3>
+              <p>Evening boat cruise at Kuala Selangor to watch the fireflies — romantic & family-friendly.</p>
+            </div>
+
+            <div class="card">
+              <h3>Genting Highlands</h3>
+              <p>Cable car, theme parks and leisure complex — full/half-day trips with flexible timings.</p>
+            </div>
+            <div class="card">
+              <h3>Penang & Ipoh</h3>
+              <p>Multi-day private tours: heritage trails, food-focused itineraries and cultural highlights.</p>
+            </div>
+            <div class="card">
+              <h3>Malacca</h3>
+              <p>Historical day trips: Dutch Square, Jonker Walk, river cruise and local cuisine tastings.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detailed tours -->
+        <section class="section" id="tours">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h2 style="margin:0;color:var(--royal)">All tour types</h2>
+            <div style="color:var(--muted);font-size:13px">Custom itineraries on request</div>
+          </div>
+
+          <div class="tours" aria-hidden="false" style="margin-bottom:6px">
+            <div class="tour">
+              <img class="img" src="https://images.unsplash.com/photo-1549693578-d683be217e58?w=800&q=60" alt="KL City">
+              <div>
+                <h4>City tours</h4>
+                <p>Half-day / full-day guided tours covering KL’s icons and local hotspots.</p>
+              </div>
+            </div>
+
+            <div class="tour">
+              <img class="img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=60" alt="Cameron Highlands">
+              <div>
+                <h4>Cameron Highlands</h4>
+                <p>Tea plantations, strawberry farms, cool climate and scenic stops.</p>
+              </div>
+            </div>
+
+            <div class="tour">
+              <img class="img" src="https://images.unsplash.com/photo-1505765050966-9a5b1a2f2bb1?w=800&q=60" alt="Genting">
+              <div>
+                <h4>Genting Highlands</h4>
+                <p>Mountain air, cable car & entertainment complex — day trips available.</p>
+              </div>
+            </div>
+
+            <div class="tour">
+              <img class="img" src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=800&q=60" alt="Penang">
+              <div>
+                <h4>Penang Tour</h4>
+                <p>George Town heritage, food tours, murals & local culture.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="min-width:220px" class="card"><h3>Bus & Car Hire</h3><p>Cars, MPVs, minibus & coach — flexible fleet for groups and transfers.</p></div>
+            <div style="min-width:220px" class="card"><h3>Airport / Overland Transfers</h3><p>Private transfers KLIA / KLIA2 / Penang / Johor and cross-state overland transfers.</p></div>
+            <div style="min-width:220px" class="card"><h3>Elephant & National Park Tours</h3><p>Ethical wildlife visits and national park nature trips — focused on conservation partners.</p></div>
+          </div>
+        </section>
+
+        <!-- Contact / booking -->
+        <section class="section" id="contact">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h2 style="margin:0;color:var(--royal)">Get a quote / Book now</h2>
+            <div style="color:var(--muted);font-size:13px">Contact only by Call or WhatsApp</div>
+          </div>
+
+          <div class="contact">
+            <form onsubmit="submitForm(event)">
+              <input id="name" placeholder="Your name" required />
+              <input id="phone" placeholder="Phone (WhatsApp)" required />
+              <select id="tourType">
+                <option value="">Select tour type (eg. Cameron Highlands, Fireflies, Penang)</option>
+                <option>City tour</option>
+                <option>Cameron Highlands</option>
+                <option>Fireflies</option>
+                <option>Genting</option>
+                <option>Penang / Ipoh</option>
+                <option>Malacca</option>
+                <option>Airport transfer</option>
+                <option>Bus / Car hire</option>
+              </select>
+              <textarea id="notes" placeholder="Preferred date, pax, pickup location & notes" rows="4"></textarea>
+
+              <button type="submit">Send via WhatsApp</button>
+
+              <div class="note">Only contact via <strong>Call or WhatsApp</strong>. WhatsApp for package price and bookings: <a href="https://wa.me/60123410000" target="_blank" rel="noopener">+60 12-341 0000</a></div>
+            </form>
+
+            <aside style="padding:16px;background:var(--card);border-radius:10px;box-shadow:0 8px 20px rgba(13,71,161,0.04)">
+              <h3 style="margin-top:0;color:var(--royal)">Contact details</h3>
+              <p style="margin:6px 0;color:var(--muted)"><strong>Premier Holidays</strong></p>
+              <p style="margin:6px 0;"><strong>WhatsApp / Call:</strong> <a href="https://wa.me/60123410000" target="_blank" rel="noopener">+60 12-341 0000</a></p>
+              <p style="margin:6px 0;color:var(--muted)">Pickup anywhere in KL / airports. Multi-day and custom routes available. Package price via WhatsApp only.</p>
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <!-- Reviews column -->
+      <aside class="reviews-col" aria-label="Customer reviews">
+        <h3>Customer reviews — 5★ (Verified guests)</h3>
+        <div id="reviewsList"></div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+          <strong>Highlight:</strong> "Riz is extremely knowledgeable" • "Nur is always available on WhatsApp" — these are common themes from our guests.
+        </div>
+      </aside>
+    </div>
+
+    <footer style="margin-top:18px">
+      <div>© <span id="yr"></span> Premier Holidays — Private tours & transfers • Contact by Call or WhatsApp only</div>
+      <div style="margin-top:6px;color:var(--muted)">Images are for illustration — replace with your own photos.</div>
+    </footer>
+  </main>
+
+  <script>
+    // YEAR
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Reviews data (50 x 5-star mixed short/medium/long)
+    const reviews = [
+      "⭐️⭐️⭐️⭐️⭐️ Riz knows every corner of KL — his explanations were clear and interesting. Nur checked in often via WhatsApp. Highly recommend.",
+      "⭐️⭐️⭐️⭐️⭐️ Super service. Riz had excellent local knowledge; Nur arranged everything smoothly. Will book again.",
+      "⭐️⭐️⭐️⭐️⭐️ Amazing day — Riz's storytelling made the history come alive. Nur's WhatsApp updates were timely and helpful.",
+      "⭐️⭐️⭐️⭐️⭐️ Fast, comfortable and professional. Riz tailored the tour to our interests. Nur sorted our pickup quickly.",
+      "⭐️⭐️⭐️⭐️⭐️ Knowledgeable guide (Riz) and responsive guest lead (Nur). Good pace for our family.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz answered all our questions and pointed out hidden gems. Nur made sure we had water and snacks when needed.",
+      "⭐️⭐️⭐️⭐️⭐️ Five-star experience — driver was polite, Riz was full of knowledge, Nur responded instantly on WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Very impressed. Riz's background info added depth to the sites. Nur's attention to detail was noticeable.",
+      "⭐️⭐️⭐️⭐️⭐️ The best guide we've had in Malaysia. Nur coordinated everything flawlessly via WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Short review: Riz = brilliant guide. Nur = constant support. 10/10.",
+      "⭐️⭐️⭐️⭐️⭐️ We did Cameron Highlands with Premier Holidays. Riz's knowledge about tea plantations was great. Nur handled timing perfectly.",
+      "⭐️⭐️⭐️⭐️⭐️ Loved the fireflies night — Riz knew the best viewing spots; Nur ensured our boat was ready.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz explained the heritage of Malacca in such a clear way. Nur recommended local food that was delicious.",
+      "⭐️⭐️⭐️⭐️⭐️ Excellent communication. Nur replied on WhatsApp immediately when our time changed. Riz adjusted the route seamlessly.",
+      "⭐️⭐️⭐️⭐️⭐️ We had an elderly parent with us — Riz was patient and informative. Nur arranged wheelchair-friendly stops. Much appreciated.",
+      "⭐️⭐️⭐️⭐️⭐️ Long review: We spent two days with Premier Holidays exploring Penang. Riz was knowledgeable about architecture and food history — he guided us to authentic stalls. Nur managed our bookings and kept us updated every step of the way. The whole trip felt effortless.",
+      "⭐️⭐️⭐️⭐️⭐️ Professional from start to finish. Riz's commentary was engaging and Nur's hospitality made us feel looked after.",
+      "⭐️⭐️⭐️⭐️⭐️ Quick and friendly: Riz gave great recommendations. Nur answered pricing questions instantly on WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Exceptional. The driver was safe, Riz had encyclopedic knowledge, and Nur's follow-up was appreciated.",
+      "⭐️⭐️⭐️⭐️⭐️ From pickup at KLIA to our hotel drop-off everything was smooth. Riz's local tips were spot on. Nur coordinated on WhatsApp like a pro.",
+      "⭐️⭐️⭐️⭐️⭐️ Short: Riz = 5 stars. Nur = 5 stars. Repeat customer here!",
+      "⭐️⭐️⭐️⭐️⭐️ The kids loved Riz's kid-friendly stories. Nur made snack arrangements without fuss.",
+      "⭐️⭐️⭐️⭐️⭐️ We combined city + countryside — Riz knew the scenic viewpoints. Nur communicated changes quickly.",
+      "⭐️⭐️⭐️⭐️⭐️ Amazing organization. Riz's safety brief before jungle walks was reassuring. Nur had emergency contacts ready.",
+      "⭐️⭐️⭐️⭐️⭐️ One of the best tour experiences. Riz's enthusiasm was contagious; Nur's care was meticulous.",
+      "⭐️⭐️⭐️⭐️⭐️ We asked many questions about local culture and Riz answered everything patiently. Nur's WhatsApp messages made logistics effortless.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz is a guide who clearly loves what he does. Nur treated us like VIPs — constant updates and great service.",
+      "⭐️⭐️⭐️⭐️⭐️ Two-day Genting trip was brilliant. Riz told interesting anecdotes about the area. Nur was on call for last-minute changes.",
+      "⭐️⭐️⭐️⭐️⭐️ The vehicle was clean, timing was punctual. Riz covered the main history points well. Nur double-checked our dietary needs for lunch.",
+      "⭐️⭐️⭐️⭐️⭐️ Medium: We had a mixed-age group. Riz paced the tour perfectly and Nur accommodated our special requests with no drama.",
+      "⭐️⭐️⭐️⭐️⭐️ So glad we booked Premier Holidays. Riz's local food tips were on point. Nur even sent a map to a hidden cafe via WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Friendly team. Riz knows the best photo spots. Nur's reminders kept us on schedule.",
+      "⭐️⭐️⭐️⭐️⭐️ Long: My partner and I had a bespoke itinerary for our anniversary. Riz curated a beautiful route and explained historical context with warmth. Nur arranged surprises and checked in often via WhatsApp — made the day memorable.",
+      "⭐️⭐️⭐️⭐️⭐️ Clear, calm, caring. Riz's confidence enhanced our experience. Nur's communication was flawless.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz gave us historical context that other tours missed. Nur kept us comfortable and informed all day.",
+      "⭐️⭐️⭐️⭐️⭐️ Fantastic pace and a relaxed vibe. Riz's manner was professional and engaging. Nur provided quick answers on WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz is more than a guide — he's a storyteller. Nur ensured snacks, water and timely pick-ups. Would recommend to families.",
+      "⭐️⭐️⭐️⭐️⭐️ Short: 5★ for Riz and Nur. Efficient and kind.",
+      "⭐️⭐️⭐️⭐️⭐️ We did an Ipoh day trip. Riz took us to lesser-known spots and explained their background. Nur handled timings like a pro.",
+      "⭐️⭐️⭐️⭐️⭐️ Staff were courteous. Riz's explanations were detailed without being boring. Nur's WhatsApp service was instant.",
+      "⭐️⭐️⭐️⭐️⭐️ The fireflies night was magical — Riz coordinated with the boatmen. Nur communicated boarding details clearly. Top experience.",
+      "⭐️⭐️⭐️⭐️⭐️ Riz recommended local snacks that were amazing. Nur checked on food allergies beforehand — very thoughtful.",
+      "⭐️⭐️⭐️⭐️⭐️ Great for first-time visitors. Riz's tips about getting around were practical. Nur made payment and pickup very easy via WhatsApp.",
+      "⭐️⭐️⭐️⭐️⭐️ Long: Our group of ten had a customised itinerary. Riz managed the history and kept the energy up; Nur handled restaurant reservations and confirmed seats via WhatsApp. A smooth, well-run operation.",
+      "⭐️⭐️⭐️⭐️⭐️ Comfortable cars, knowledgeable guide, and fast WhatsApp replies. What more do you need?",
+      "⭐️⭐️⭐️⭐️⭐️ The team adapted to weather changes — Riz suggested indoor alternatives and Nur coordinated times instantly.",
+      "⭐️⭐️⭐️⭐️⭐️ Overall an unforgettable trip — informative, kind, and punctual. Riz and Nur were exceptional hosts.",
+      "⭐️⭐️⭐️⭐️⭐️ Nur's hospitality and Riz's historical insights made this one of the best tours we've taken."
+    ];
+
+    // Render reviews
+    const reviewsList = document.getElementById('reviewsList');
+    reviews.forEach((text, i) => {
+      const div = document.createElement('div');
+      div.className = 'review';
+      div.innerHTML = `
+        <div class="stars">★★★★★</div>
+        <div class="rev-meta">Guest ${i+1} — 5 stars</div>
+        <div class="rev-text">${text.replace(/^⭐+ /, '')}</div>
+      `;
+      reviewsList.appendChild(div);
+    });
+
+    // Form to WhatsApp: take fields and open WhatsApp with prefilled message
+    function submitForm(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const tour = encodeURIComponent(document.getElementById('tourType').value.trim() || 'General enquiry');
+      const notes = encodeURIComponent(document.getElementById('notes').value.trim());
+      if(!name || !phone){
+        alert('Please enter your name and WhatsApp phone number.');
+        return;
+      }
+      const message = `Premier Holidays - Quote request.%0AName: ${name}%0APhone (WhatsApp): ${phone}%0ATour: ${tour}%0ANotes: ${notes}%0A%0APlease respond with package price.`;
+      // WhatsApp number (business)
+      const wa = '60123410000';
+      window.open(`https://wa.me/${wa}?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
